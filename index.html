@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/the-standard-barbershop/">
+<!-- BASE:END -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+<!-- SEO Meta Tags -->
+<title>The Standard — Premium Barbershop in Suva</title>
+<meta name="description" content="The Standard is Suva" />
+<meta property="og:title" content="The Standard — Premium Barbershop in Suva" />
+<meta property="og:description" content="The Standard is Suva" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Standard — Premium Barbershop in Suva" />
+<meta name="twitter:description" content="The Standard is Suva" />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mqaeaj17-ol8y5";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  var u=new URL(location.href);var found=null;var changed=false;
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=4748');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='FWKgvyNG';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grain"></div>
+<div class="frame"></div>
+
+<nav>
+  <div class="wrap nav-in">
+    <div class="logo"><span class="dot">TS</span> The Standard</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#story">The Shop</a>
+      <a href="#contact">Contact</a>
+      <a href="#book" class="ticket green">Book a Chair</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker"><span class="rule"></span> Est. Suva · Fiji · By Appointment</div>
+    <h1><span class="lead">✻</span>The cut, the shave, the standard.</h1>
+    <p class="sub">Precision barbering and hot-towel shaves for the man who keeps his edge. In the heart of Suva — no rush, no guesswork, just a sharp finish every time.</p>
+    <div class="hero-cta">
+      <a href="#book" class="ticket">Book Your Appointment</a>
+      <a href="#services" class="linkbtn">Explore the services →</a>
+    </div>
+  </div>
+  <div class="stamp-badge" aria-hidden="true">
+    <svg viewBox="0 0 130 130">
+      <defs><path id="cir" d="M65,65 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+      <circle cx="65" cy="65" r="60" fill="none" stroke="#22356F" stroke-width="2"/>
+      <circle cx="65" cy="65" r="54" fill="none" stroke="#D9442C" stroke-width="1"/>
+      <text font-family="Spline Sans Mono, monospace" font-size="10.5" letter-spacing="3.4" fill="#22356F">
+        <textPath href="#cir" startOffset="0%">SHARP · CLEAN · SINCE DAY ONE · SUVA · </textPath>
+      </text>
+      <text x="65" y="60" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="20" fill="#1C7C54">EST</text>
+      <text x="65" y="82" text-anchor="middle" font-family="Spline Sans Mono, monospace" font-size="13" letter-spacing="2" fill="#D9442C">FIJI</text>
+    </svg>
+  </div>
+</header>
+
+<div class="marquee-band">
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>Skin Fades <b class="s">✻</b></span><span>Hot-Towel Shaves <b class="s">✻</b></span><span>Beard Sculpting <b class="s">✻</b></span><span>Scissor Cuts <b class="s">✻</b></span><span>Walk The Walk <b class="s">✻</b></span>
+      <span>Skin Fades <b class="s">✻</b></span><span>Hot-Towel Shaves <b class="s">✻</b></span><span>Beard Sculpting <b class="s">✻</b></span><span>Scissor Cuts <b class="s">✻</b></span><span>Walk The Walk <b class="s">✻</b></span>
+    </div>
+  </div>
+</div>
+
+<section class="welcome reveal">
+  <div class="wrap welcome-grid">
+    <div>
+      <div class="sec-head"><span class="fig">Fig. 01</span><h2>A proper barbershop, done right.</h2></div>
+      <p>The Standard is built on one idea: a man's haircut should be worth sitting still for. We take our time, we get the line right, and you walk out looking like the best version of yourself.</p>
+      <p>Warm towels, a clean chair, an honest conversation, and a finish that holds for weeks. Whether it's your first visit or your fiftieth, you get the same answer every time — the standard.</p>
+      <a href="#story" class="linkbtn">More about the shop →</a>
+    </div>
+    <div class="plate" style="aspect-ratio:4/5">
+      <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80" alt="Barber giving a precise cut">
+      <span class="cap">Fig. 01 — The chair</span>
+    </div>
+  </div>
+</section>
+
+<section class="services reveal" id="services">
+  <div class="wrap">
+    <div class="sec-head"><span class="fig">✻ The list</span><h2>What we do</h2></div>
+    <div class="svc-grid">
+      <div class="card">
+        <span class="num">No. 01</span>
+        <h3>The Standard Cut</h3>
+        <p>Consultation, scissor or clipper cut, hot towel, and a clean finish. Tailored to your head, not a template.</p>
+        <span class="price">$35 FJD</span>
+      </div>
+      <div class="card">
+        <span class="num">No. 02</span>
+        <h3>Skin Fade</h3>
+        <p>A seamless, blade-tight fade blended into the length up top. The detail people notice without knowing why.</p>
+        <span class="price">$40 FJD</span>
+      </div>
+      <div class="card">
+        <span class="num">No. 03</span>
+        <h3>Hot-Towel Shave</h3>
+        <p>The full ritual — warm towels, oil, a straight-razor shave, and aftercare. The closest, calmest shave you'll get.</p>
+        <span class="price">$45 FJD</span>
+      </div>
+      <div class="card">
+        <span class="num">No. 04</span>
+        <h3>Beard Sculpt</h3>
+        <p>Shaped, lined, trimmed and conditioned. We map the beard to your jaw so it grows out clean, not patchy.</p>
+        <span class="price">$25 FJD</span>
+      </div>
+      <div class="card">
+        <span class="num">No. 05</span>
+        <h3>Cut &amp; Beard</h3>
+        <p>The full reset. Standard cut paired with a beard sculpt, finished together so the whole look lines up.</p>
+        <span class="price">$55 FJD</span>
+      </div>
+      <div class="card">
+        <span class="num">No. 06</span>
+        <h3>The Father &amp; Son</h3>
+        <p>Two chairs, two cuts, one good morning out. Bring the young man in for his first proper barber visit.</p>
+        <span class="price">$60 FJD</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story reveal" id="story">
+  <div class="wrap story-grid">
+    <div class="plate" style="aspect-ratio:4/5">
+      <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80" alt="Inside the barbershop">
+      <span class="cap">Fig. 02 — The room</span>
+    </div>
+    <div>
+      <div class="sec-head"><span class="fig">Fig. 02</span><h2>Built in Suva, for Suva.</h2></div>
+      <p>We started The Standard because the city deserved a barbershop that treated a haircut like a craft, not a queue. Every barber here trains on the fundamentals first — the line, the blend, the finish — before they ever touch a fade.</p>
+      <p>It's the kind of place you settle into. Good chairs, good talk, and a cut that earns the walk back through the door. That's the whole promise.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testi reveal">
+  <div class="wrap">
+    <div class="sec-head"><span class="fig">✻ Word of mouth</span><h2>What the chair says</h2></div>
+    <div class="t-grid">
+      <div class="quote">
+        <span class="mark">“</span>
+        <p>Best fade I've had in Suva, full stop. They actually listen before they pick up the clippers — I've been coming back monthly ever since.</p>
+        <span class="who"><b>Tevita R.</b> — Regular since opening</span>
+      </div>
+      <div class="quote">
+        <span class="mark">“</span>
+        <p>Took my old man in for the hot-towel shave for his birthday. He hasn't stopped talking about it. Proper old-school service.</p>
+        <span class="who"><b>Aman P.</b> — Suva</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking reveal" id="book">
+  <div class="wrap book-in">
+    <h2>Ready when you are. Book your chair.</h2>
+    <div>
+      <p class="book-meta"><span class="ast">✻</span> Walk-ins welcome, appointments preferred<br>
+      <span class="ast">✻</span> Open Tue–Sun<br>
+      <span class="ast">✻</span> Call or message to lock a time</p>
+      <div style="margin-top:22px"><a href="tel:+6790000000" class="ticket">Call to Book →</a></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">The Standard</div>
+        <p>Suva's premium barbershop. Precision cuts, hot-towel shaves, and grooming done the way it should be.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>[Your street address]</p>
+        <p>Suva, Fiji</p>
+        <a href="https://maps.google.com" target="_blank" rel="noopener">Get directions →</a>
+      </div>
+      <div>
+        <h4>Hours &amp; Contact</h4>
+        <p>Tue–Sun · 9am – 6pm</p>
+        <a href="tel:+6790000000">+679 000 0000</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">@thestandard.fj</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> The Standard Barbershop · Suva, Fiji</span>
+      <span>✻ Sharp · Clean · Since Day One</span>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
